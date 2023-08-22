@@ -6,6 +6,7 @@ import ErrorAlert from "../../components/ui/error-alert";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function FilteredEventsPage() {
   const [loadedEvents, setLoadedEvents] = useState();
@@ -90,6 +91,13 @@ function FilteredEventsPage() {
 
   return (
     <>
+      <Head>
+        <title>Filtered Events</title>
+        <meta
+          name="description"
+          content={`All events for ${numMonth}/${numYear}`}
+        />
+      </Head>
       <ResultsTitle date={date} />
       <EventList events={filteredEvents} />
     </>

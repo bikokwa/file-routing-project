@@ -16,8 +16,11 @@ function AllEventsPage(props) {
   return (
     <>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>All Events</title>
+        <meta
+          name="description"
+          content="Find top notch events that will allow you to rise faster in tech.."
+        />
       </Head>
       <EventsSearch onSearch={filteredEventsHandler} />
       <EventList events={events} />
